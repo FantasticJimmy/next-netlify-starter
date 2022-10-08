@@ -74,7 +74,7 @@ For our testing, we use [Cypress](https://www.cypress.io/) for end-to-end testin
 -    enable = true
 -
 -  [plugins.inputs]
--    enable = false 
+-    enable = false
 ```
 
 If you’d like to remove the `netlify-plugin-cypress` build plugin entirely, you’d need to delete the entire block above instead. And then make sure sure to remove the package from the dependencies using:
@@ -87,4 +87,5 @@ And lastly if you’d like to remove Cypress entirely, delete the entire `cypres
 
 ```bash
 npm uninstall -S cypress
+1222
 ```
