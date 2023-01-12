@@ -33,3 +33,18 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.count-down-group{
+  display: flex;
+}
+
+.countDownSection{
+  display: flex;
+  margin: 0 20px;
+  flex-direction: column;
+}
+
+.tick{
+  display: flex;
+  justify-content: center;
+}
