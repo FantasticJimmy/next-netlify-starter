@@ -9,8 +9,12 @@
   },
   "dependencies": {
     "@pqina/flip": "^1.7.7",
+    "@react-spring/three": "^9.6.1",
+    "@react-three/cannon": "^6.5.2",
+    "@react-three/csg": "^2.0.7",
     "@react-three/drei": "^9.52.2",
     "@react-three/fiber": "^8.10.0",
+    "@react-three/rapier": "^0.12.2",
     "@types/three": "^0.148.0",
     "cypress": "^10.0.3",
     "next": "^12.1.5",
