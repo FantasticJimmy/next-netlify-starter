@@ -2,10 +2,15 @@ import Countdown from "react-countdown";
 import dynamic from "next/dynamic";
 const Flip = dynamic(() => import("@components/Flip"), { ssr: false });
 
-const feb25 = new Date("2023-02-25");
+var dt = new Date(new Date("2023-02-26"));
+console.log(dt); // Gives Tue Mar 22 2016 09:30:00 GMT+0530 (IST)
+
+dt.setTime(dt.getTime() + dt.getTimezoneOffset() * 60 * 1000);
+console.log(dt); // Gives Tue Mar 22 2016 04:00:00 GMT+0530 (IST)
+
 export default function MyCountdown() {
   return (
-    <Countdown date={feb25} renderer={renderer}>
+    <Countdown date={dt} renderer={renderer}>
       <Completionist />
     </Countdown>
   );

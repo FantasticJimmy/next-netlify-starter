@@ -72,7 +72,7 @@ export default function MyBackground({ children }) {
     >
       {/* <img src={"/1000004687.JPEG"} /> */}
 
-      <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [5, 5, 10] }}>
+      <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [1, 1, 5] }}>
         <ambientLight />
         <MarioStar touched={touched} setTouched={setTouched} />
         <Physics gravity={[0, -10, 0]}>
