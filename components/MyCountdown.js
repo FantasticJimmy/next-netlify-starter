@@ -2,7 +2,7 @@ import Countdown from "react-countdown";
 import dynamic from "next/dynamic";
 const Flip = dynamic(() => import("@components/Flip"), { ssr: false });
 
-var dt = new Date(new Date("2023-02-26"));
+var dt = new Date(new Date("2023-02-25"));
 console.log(dt); // Gives Tue Mar 22 2016 09:30:00 GMT+0530 (IST)
 
 dt.setTime(dt.getTime() + dt.getTimezoneOffset() * 60 * 1000);
