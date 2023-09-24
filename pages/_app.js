@@ -1,7 +1,9 @@
 import "@styles/globals.css";
+import { useEffect, useState } from "react";
 
-function Application({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function App({ Component, pageProps }) {
+  const [render, setRender] = useState(false);
+  useEffect(() => setRender(true), []);
+  return render ? <Component {...pageProps} /> : null;
 }
-
-export default Application;
+export default App;

@@ -12,7 +12,7 @@ import { Physics, usePlane, useTrimesh, useBox } from "@react-three/cannon";
 import { InstancedRigidBodies } from "@react-three/rapier";
 import { useSpring, animated } from "@react-spring/three";
 import { Mario } from "./Mario";
-
+import { useNavigate } from "react-router-dom";
 // Register the THREE namespace as native JSX elements.
 // See below for notes on tree-shaking
 extend(THREE);
@@ -143,7 +143,6 @@ const MarioStar = (props) => {
       props.setTouched(false);
     },
   });
-  console.log(props.touched);
   useFrame(() => {
     startModel.current.rotation.y += 0.1;
   }, [props.touched]);
@@ -162,6 +161,8 @@ const MarioStar = (props) => {
 };
 
 const MarioBox = (props) => {
+  const navigate = useNavigate();
+
   const { scene, nodes } = useGLTF("/mario-box.glb");
   const [ref] = useBox(
     () => ({
@@ -189,10 +190,12 @@ const MarioBox = (props) => {
       model.current.position.y -= 0.2;
     }
   });
-
+  const handleClick = () => {
+    navigate("/dashboard");
+  };
   return (
     <group ref={model}>
-      <primitive object={scene} scale={1} ref={ref} />
+      <primitive object={scene} scale={1} ref={ref} onClick={handleClick} />
     </group>
   );
 };
